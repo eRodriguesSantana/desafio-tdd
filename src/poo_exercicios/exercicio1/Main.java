@@ -11,8 +11,8 @@ public class Main {
 		veiculo.setPlaca("EDU-1989");
 		veiculo.setCor("Azul");
 		veiculo.setKm(1200.0f);
-		veiculo.setLigado(true);
-		veiculo.setLitrosCombustivel(31);
+		veiculo.setLigado(false);
+		veiculo.setLitrosCombustivel(-31);
 		veiculo.setVelocidade(120);
 		veiculo.setPreco(250.000);
 		veiculo.dadosVeiculo();

@@ -93,7 +93,7 @@ public class Veiculo {
 	}
 	
 	public int abastecer(int combustivel) {
-		if(this.litrosCombustivel <= 60 && combustivel < (60 - this.litrosCombustivel))
+		if(this.litrosCombustivel <= 60 && combustivel < (60 - this.litrosCombustivel) && combustivel > 0)
 			return this.litrosCombustivel += combustivel;
 		else
 			return 0;
@@ -114,6 +114,13 @@ public class Veiculo {
 			this.frear();			
 		}
 		this.isLigado = false;
+	}
+	
+	public int velocidade() {
+		if(this.velocidade > 0) {
+			return 1;
+		}
+		return 0;
 	}
 	
 	public void dadosVeiculo() {
