@@ -18,6 +18,6 @@ public class Main {
 		
 		v.setNome("Edu");
 		v.setSalario(7000.00);
-		System.out.println(s.getNome() + ": Salário + Bonificação: " + v.bonificacao());		
+		System.out.println(v.getNome() + ": Salário + Bonificação: " + v.bonificacao());		
 	}
 }

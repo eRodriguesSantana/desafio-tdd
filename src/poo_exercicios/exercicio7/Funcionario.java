@@ -15,7 +15,9 @@ public class Funcionario {
 	}
 
 	public int getIdade() {
-		return idade;
+		if(this.idade > 0)
+			return idade;
+		return 0;
 	}
 
 	public void setIdade(int idade) {
@@ -23,7 +25,9 @@ public class Funcionario {
 	}
 
 	public double getSalario() {
-		return salario;
+		if(this.salario > 0)
+			return salario;
+		return 0;
 	}
 
 	public void setSalario(double salario) {
