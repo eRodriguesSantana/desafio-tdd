@@ -37,7 +37,9 @@ public abstract class Personagem {
 	}	
 
 	public int getVida() {
-		return vida;
+		if(this.vida > 0)
+			return this.vida;
+		return 0;
 	}
 
 	public void setVida(int vida) {
