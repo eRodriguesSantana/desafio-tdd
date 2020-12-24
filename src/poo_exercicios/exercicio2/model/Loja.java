@@ -61,6 +61,32 @@ public class Loja {
 		}
 	}
 	
+	public int estoqueLivros() {
+		int quantidadeEstoque = 0;
+		
+		if(this.livros.size() > 0) {
+			for(int i = 0; i < this.livros.size(); i++) {
+				quantidadeEstoque++;
+			}
+			return quantidadeEstoque;
+		} else {
+			return 0;
+		}
+	}
+	
+	public double valorEstoqueLivros() {
+		double valorEstoque = 0;
+		
+		if(this.livros.size() > 0) {
+			for(Livro livro: livros) {
+				valorEstoque += livro.getPreco() * livro.getQtd();
+			}
+			return valorEstoque;
+		} else {
+			return 0;
+		}
+	}
+	
 	public void listaVideogames() {
 		if(this.videoGames.size() > 0) {
 			for(VideoGame videogame: videoGames) {
@@ -68,6 +94,32 @@ public class Loja {
 			}
 		} else {
 			System.out.println("A loja não tem video-games no seu estoque.");
+		}
+	}
+	
+	public int estoqueVideogames() {
+		int quantidadeEstoque = 0;
+		
+		if(this.videoGames.size() > 0) {
+			for(int i = 0; i < this.videoGames.size(); i++) {
+				quantidadeEstoque++;
+			}
+			return quantidadeEstoque;
+		} else {
+			return 0;
+		}
+	}
+	
+	public double valorEstoqueVideoGames() {
+		double valorEstoque = 0;
+		
+		if(this.videoGames.size() > 0) {
+			for(VideoGame videoGame: videoGames) {
+				valorEstoque += videoGame.getPreco() * videoGame.getQtd();
+			}
+			return valorEstoque;
+		} else {
+			return 0;
 		}
 	}
 	
@@ -83,5 +135,11 @@ public class Loja {
 		}
 		
 		return totalPatrimonio;
+	}
+	
+	public boolean possuiCNPJ() {
+		if(this.cnpj != null || this.cnpj != "")
+			return true;
+		return false;
 	}
 }
