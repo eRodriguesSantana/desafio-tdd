@@ -23,7 +23,8 @@ public class Livro extends Produto implements Imposto{
 	}
 
 	public void setAutor(String autor) {
-		this.autor = autor;
+		if(autor != null || autor != "")
+			this.autor = autor;
 	}
 
 	public String getTema() {
@@ -57,5 +58,19 @@ public class Livro extends Produto implements Imposto{
 		} else {
 			return 0.1 * this.getPreco();
 		}
+	}
+
+	@Override
+	public int preco() {
+		if(this.getPreco() > 0)
+			return 1;
+		return 0;
+	}
+
+	@Override
+	public int quantidade() {
+		if(this.getQtd() > 0)
+			return 1;
+		return 0;
 	}
 }
