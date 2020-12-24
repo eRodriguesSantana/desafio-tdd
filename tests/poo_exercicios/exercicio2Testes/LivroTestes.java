@@ -34,4 +34,5 @@ public class LivroTestes {
 		livro.setPreco(80);
 		assertEquals(0, livro.calculaImposto(), 0.0001);
 	}
+	
 }
