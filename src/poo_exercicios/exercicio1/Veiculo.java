@@ -119,6 +119,7 @@ public class Veiculo {
 	public int velocidade() {
 		if(this.velocidade > 0) {
 			return 1;
+			
 		}
 		return 0;
 	}
