@@ -57,5 +57,19 @@ public class VideoGame extends Produto implements Imposto {
 			return 0.45 * this.getPreco();
 		}
 	}
+
+	@Override
+	public int preco() {
+		if(this.getPreco() > 0)
+			return 1;
+		return 0;
+	}
+
+	@Override
+	public int quantidade() {
+		if(this.getQtd() > 0)
+			return 1;
+		return 0;
+	}
 	
 }

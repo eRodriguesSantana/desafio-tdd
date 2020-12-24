@@ -38,4 +38,8 @@ public abstract class Produto {
 	public void setQtd(int qtd) {
 		this.qtd = qtd;
 	}
+	
+	public abstract int preco();
+	
+	public abstract int quantidade();
 }
